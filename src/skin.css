@@ -8,16 +8,20 @@ html{
 body{
     font-family: "Times New Roman", Times, serif;
     font-size: 1em;
-    background: var(--cor3);;
+    background: var(--cor3);
     height: 95vh;
     width: auto;
-    flex-direction: row;
     display: grid;
     grid-template-areas: 
     "header header"
     "sidebar conteudo";
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 35% 75%;
     grid-template-rows: 20% 80%;
+}
+h1{
+    font-size: 2em;
+    color: var(--cor4);
+    text-align: center;
 }
 .banner{
     display: inline-flex;
@@ -29,30 +33,19 @@ body{
     grid-column: 1 / span 2;
 }
 .banner img{
-    height: 100%;
     width: 100%;
-    margin: 0;
-}
-.slogan{
-    display: inline;
-    padding: 1px;
-    color: var(--cor4);
-    background-color: var(--cor3);
     height: 100%;
-    width: auto;
-    border: 5px solid var(--cor3);
+    margin: 0;
 }
 .sidebar{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 1px;
+    justify-content:flex-start;
     color: var(--cor4);
     background-color: var(--cor3);
     height: 100%;
     width: auto;
-    border: 5px solid var(--cor3);
     grid-area: sidebar;
     grid-row: 2;
     grid-column: 1;
@@ -60,7 +53,6 @@ body{
 .menu{
     color: var(--cor4);
     border-radius: 1px;
-    display: flex;
     flex-direction: column;
 }
 .link {
@@ -73,10 +65,11 @@ body{
     color: var(--cor4);
     padding: 0.5em 1em;
     border-radius: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 400;
+    font-size: 1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
  img{
     width: 1em;
@@ -88,8 +81,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1em;
+    justify-content: flex-start;
+    padding: 2em;
     color: var(--cor4);
     background-color: var(--cor3);
     border: 5px solid var(--cor3);
@@ -104,3 +97,18 @@ body{
     padding: 1em;
     color: var(--cor4);
 }
+.logo2{
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+.mapa{
+    width: 50%;
+    height: 50%;
+    border-radius: 2px;
+    margin: 5px;
+}
+@media screen and (min-width:815px) {
+    html {
+        font-size: 20px;
+    }
