@@ -96,7 +96,7 @@ h1{
     grid-area: conteudo;
     grid-row: 2;
     grid-column: 2;
-    margin-left: 5em;
+    margin-left: 1em;
 }
 .conteudo .lista{
     display: flex;
@@ -107,8 +107,8 @@ h1{
     color: var(--cor4);
 }
 .mapa{
-    width: 50%;
-    height: 50%;
+    width: 800px;
+    height: 400px;
     border-radius: 2px;
     margin: 5px;
 }
