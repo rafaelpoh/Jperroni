@@ -95,6 +95,7 @@ main.conteudo {
 p {
   text-wrap: pretty;
   text-align: start;
+  margin-top: 1em;
 }
 ul.lista {
   margin-left: 2em;
