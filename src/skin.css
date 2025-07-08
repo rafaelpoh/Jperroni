@@ -9,7 +9,7 @@ html {
 body {
   font-family: "Open Sans", Times, serif;
   font-size: 1.5em;
-  background-color: var(--cor6);
+  background-color: var(--cor7);
   display: grid;
   grid-template-areas:
     "header header"
@@ -102,10 +102,11 @@ ul.lista {
   text-align: flex-start;
   padding: 0.5em;
   color: var(--cor3);
-  list-style: square;
+  list-style: circle;
 }
 li.lista {
   margin: 0 0.5em;
+  list-style: disc;
 }
 li.contatos {
   text-decoration: none;
