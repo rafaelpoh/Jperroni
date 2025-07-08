@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 }
 html {
@@ -85,7 +83,7 @@ main.conteudo {
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 2em;
-  width: 95%;
+  width: 90%;
   height: 100%;
   color: var(--cor3);
   grid-area: conteudo;
@@ -93,7 +91,6 @@ main.conteudo {
   grid-column: 2;
 }
 p {
-  text-wrap: pretty;
   text-align: start;
   margin-top: 1em;
 }

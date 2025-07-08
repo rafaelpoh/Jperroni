@@ -1,0 +1,82 @@
+/* --- CSS Reset --- */
+
+/* 1. Box-sizing para facilitar o layout */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 2. Remover margens e preenchimentos padrão */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure, figcaption, table, th, td, form, fieldset, legend, details, summary, main, article, aside, footer, header, nav, section, menu, details, summary {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Definir fonte padrão e line-height para melhor legibilidade */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Melhorar o render da fonte em Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Melhorar o render da fonte em Firefox/Mac */
+}
+
+/* 4. Resetar estilos de lista (ol, ul) */
+ol, ul {
+  list-style: none;
+}
+
+/* 5. Estilos para imagens e mídias responsivas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Remover negrito padrão e itálico de elementos semânticos */
+b, strong {
+  font-weight: bolder; /* Manter negrito em elementos como <b> e <strong> */
+}
+i, em {
+  font-style: italic; /* Manter itálico em <i> e <em> */
+}
+
+/* 7. Resetar links para remover sublinhado padrão */
+a {
+  text-decoration: none;
+  color: inherit; /* Herdará a cor do pai, facilitando a customização */
+}
+
+/* 8. Resetar estilos de formulário */
+input, button, textarea, select {
+  font: inherit; /* Herdar a fonte do pai */
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+/* 9. Focar em acessibilidade para elementos clicáveis */
+button, [type="button"], [type="reset"], [type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none; /* Remover estilos padrão em Webkit */
+}
+
+/* 10. Desabilitar estilo padrão de botões em iOS */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 11. Melhorar a usabilidade de focus para acessibilidade */
+:focus-visible {
+  outline: 2px solid currentColor; /* Adiciona um outline visível ao focar */
+  outline-offset: 2px;
+}
+
+/* 12. Melhorar a renderização de elementos HTML5 */
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
