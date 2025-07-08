@@ -14,7 +14,7 @@ body {
   grid-template-areas:
     "header header"
     "sidebar conteudo";
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 20% 80%;
   grid-template-rows: 30% 70%;
   width: 100%;
   height: 100%;
@@ -93,6 +93,7 @@ main.conteudo {
 p {
   text-align: start;
   margin-top: 1em;
+  margin-left: 1em;
 }
 ul.lista {
   margin-left: 2em;
@@ -101,12 +102,12 @@ ul.lista {
   text-align: flex-start;
   padding: 0.5em;
   color: var(--cor3);
+  list-style: square;
 }
 li.lista {
   margin: 0 0.5em;
 }
 li.contatos {
-  list-style: none;
   text-decoration: none;
   margin: 2em;
 }
