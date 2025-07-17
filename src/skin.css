@@ -7,17 +7,17 @@ html {
   width: 100vw;
 }
 body {
-  font-family: "Open Sans", Times, serif;
+  font-family: Lato, Times, serif;
   font-size: 1.5em;
-  background-color: var(--cor7);
+  background-color: var(--cor8);
   display: grid;
   grid-template-areas:
     "header header"
     "sidebar conteudo";
   grid-template-columns: 30% 80%;
   grid-template-rows: 30% 70%;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 h1 {
   font-size: 1em;
@@ -33,9 +33,7 @@ header.banner {
   grid-area: header;
   grid-row: 1 / span 1;
   grid-column: 1 / span 2;
-  margin: 0;
-  width: 100%;
-  height: 100%;
+  width: 90.9%;
 }
 img.logo {
   display: flex;
@@ -52,17 +50,18 @@ img.icone-do-perfil {
 }
 nav.menu {
   color: var(--cor3);
-  border-radius: 1px;
-  flex-direction: column;
-  justify-content: space-between;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start ;
   width: 100%;
+  height: 100%;
   grid-area: sidebar;
   grid-row: 2;
   grid-column: 1;
   text-wrap: nowrap;
   overflow-x: hidden;
   align-items: center;
+  padding-top: 2em;
 }
 a.link {
   color: var(--cor3);
@@ -83,8 +82,8 @@ main.conteudo {
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 1em;
-  width: 80%;
-  height: 100%;
+  width: 85%;
+  height: 80%;
   color: var(--cor3);
   grid-area: conteudo;
   grid-row: 2;
@@ -100,7 +99,6 @@ ul.lista {
   margin-left: 2em;
   display: flex;
   flex-direction: column;
-  text-align: flex-start;
   padding: 0.5em;
   color: var(--cor3);
   list-style: circle;
@@ -121,6 +119,13 @@ img.icone {
   height: auto;
   width: 100%;
   border-radius: 2px;
+}
+ul.menu {
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  justify-content:space-between;
+  list-style: none;
 }
 a {
   text-decoration: none;
