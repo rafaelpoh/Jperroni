@@ -71,6 +71,10 @@ li.link1 {
   margin-top: 1em;
   list-style: none;
 }
+li.link1 :hover  {
+  text-decoration: underline;
+  text-decoration-color: var(--cor4);
+}
 img {
   width: 1em;
   height: 1em;
@@ -113,6 +117,14 @@ li.lista {
 li.contatos {
   text-decoration: none;
   margin: 1em;
+}
+li.contatos a {
+  display: flex;
+  align-items: center;
+}
+li.contatos :hover  {
+  text-decoration: underline;
+  text-decoration-color: var(--cor4);
 }
 img.icone {
   width: 2em;
