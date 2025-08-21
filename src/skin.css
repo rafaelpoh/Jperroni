@@ -184,6 +184,7 @@ address {
     justify-content: center;
     height: 80px;
     padding: 0;
+    grid-area: header;
   }
 
   header.banner img.logo {
@@ -193,9 +194,10 @@ address {
     object-fit: cover;
   }
 
-  nav.menu {
+    nav.menu {
     height: auto;
     padding: 0;
+    grid-area: sidebar;
   }
 
   nav.menu ul {
@@ -205,12 +207,11 @@ address {
     width: 100%;
   }
 
-  main.conteudo {
+    main.conteudo {
     width: 95%;
     height: auto;
     margin-top: 0;
-    grid-row: 3;
-    grid-column: 1;
+    grid-area: conteudo;
     align-items: center;
   }
 }
