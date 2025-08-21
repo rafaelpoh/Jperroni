@@ -19,20 +19,33 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     const getPageFromUrl = () => {
-        const path = window.location.pathname;
-        const page = path.substring(path.lastIndexOf('/') + 1);
-        if (page === '' || page === 'index.html') {
-            return 'home.html';
+        const params = new URLSearchParams(window.location.search);
+        let page = params.get('page');
+        if (!page) {
+            // If no 'page' parameter, check if it's index.html or root
+            const path = window.location.pathname;
+            const pathSegments = path.split('/');
+            const lastSegment = pathSegments[pathSegments.length - 1];
+
+            if (lastSegment === '' || lastSegment === 'index.html') {
+                page = 'home'; // Default page
+            } else {
+                // Fallback for direct access to partials (e.g., /home.html)
+                page = lastSegment.replace('.html', '');
+            }
         }
-        return page;
+        return `${page}.html`;
     }
 
     document.querySelectorAll(".menu a.link").forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
-            const url = this.getAttribute("href");
-            history.pushState({ path: url }, "", url);
-            loadContent(url);
+            const fullUrl = this.getAttribute("href"); // e.g., index.html?page=home
+            const urlObj = new URL(fullUrl, window.location.origin);
+            const pageName = urlObj.searchParams.get('page'); // e.g., home
+
+            history.pushState({ page: pageName }, "", fullUrl);
+            loadContent(`${pageName}.html`);
         });
     });
 
