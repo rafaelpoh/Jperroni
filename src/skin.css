@@ -5,6 +5,7 @@ html {
   height: 100vh;
   width: 100vw;
 }
+
 body {
   font-family: Lato, Times, serif;
   font-size: 1.5em;
@@ -18,22 +19,34 @@ body {
   height: 100%;
   width: 100%;
 }
+
 h1 {
   font-size: 1em;
   color: var(--cor3);
   margin: 0.1em;
   text-align: center;
 }
-header.banner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  grid-area: header;
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 2;
-  width: 100%;
+
+a {
+  text-decoration: none;
+  color: var(--cor3);
 }
+
+a.link {
+  border-radius: 2px;
+}
+
+a.link:hover, li.contatos a:hover  {
+  text-decoration: underline;
+  text-decoration-color: var(--cor4);
+}
+
+img {
+  width: 1em;
+  height: 1em;
+  align-items: center;
+}
+
 img.logo {
   display: flex;
   flex-direction: column;
@@ -41,45 +54,41 @@ img.logo {
   width: 100%;
   height: 100%;
 }
+
 img.icone-do-perfil {
   width: 3em;
   height: 3em;
   border-radius: 25%;
   margin: 0.2em;
 }
+
+img.icone {
+  width: 2em;
+  margin: 0.5em;
+}
+
+header.banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  grid-area: header;
+  width: 100%;
+}
+
 nav.menu {
   color: var(--cor3);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start ;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
   grid-area: sidebar;
-  grid-row: 2;
-  grid-column: 1;
   text-wrap: nowrap;
   overflow-x: hidden;
   align-items: center;
   padding: 1em;
 }
-a.link {
-  color: var(--cor3);
-  border-radius: 2px;
-  text-decoration: none;
-}
-li.link1 {
-  margin-top: 1em;
-  list-style: none;
-}
-li.link1 :hover  {
-  text-decoration: underline;
-  text-decoration-color: var(--cor4);
-}
-img {
-  width: 1em;
-  height: 1em;
-  align-items: center;
-}
+
 main.conteudo {
   display: flex;
   flex-direction: column;
@@ -89,19 +98,19 @@ main.conteudo {
   height: 95%;
   color: var(--cor3);
   grid-area: conteudo;
-  grid-row: 2;
-  grid-column: 2;
   align-items: center;
   padding: 1em;
 }
+
 main.conteudo-mapa {
   padding-top: 2em;
 }
+
 p {
   text-align: start;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
+  margin: 0.5em;
 }
+
 ul.lista {
   margin-left: 2em;
   display: flex;
@@ -110,26 +119,36 @@ ul.lista {
   color: var(--cor3);
   list-style: circle;
 }
+
 li.lista {
   margin: 0 0.5em;
   list-style: disc;
 }
+
+ul.lista ul {
+  margin-left: 2em;
+}
+
+ul.lista ul li {
+  list-style-type: square;
+  margin-top: 0.5em;
+}
+
+li.link1 {
+  margin-top: 1em;
+  list-style: none;
+}
+
 li.contatos {
-  text-decoration: none;
+  list-style: none;
   margin: 1em;
 }
+
 li.contatos a {
   display: flex;
   align-items: center;
 }
-li.contatos :hover  {
-  text-decoration: underline;
-  text-decoration-color: var(--cor4);
-}
-img.icone {
-  width: 2em;
-  margin: 0.5em;
-}
+
 .mapa-container {
   flex-grow: 1;
   width: 95%;
@@ -143,27 +162,18 @@ img.icone {
   width: 100%;
   border-radius: 2px;
 }
-ul.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  list-style: none;
-  width: 80%;
-}
-a {
-  text-decoration: none;
-  color: var(--cor3);
-}
+
 address {
   font-style: normal;
   color: var(--cor1);
 }
+
 @media screen and (min-width: 400px) {
   html {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 815px) {
   html {
     font-size: 18px;
@@ -184,7 +194,6 @@ address {
     justify-content: center;
     height: 80px;
     padding: 0;
-    grid-area: header;
   }
 
   header.banner img.logo {
@@ -194,24 +203,28 @@ address {
     object-fit: cover;
   }
 
-    nav.menu {
+  nav.menu {
     height: auto;
     padding: 0;
-    grid-area: sidebar;
   }
 
   nav.menu ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
   }
 
-    main.conteudo {
-    width: 95%;
+  nav.menu ul li.link1 {
+    margin: 0.5em;
+  }
+
+  main.conteudo {
+    width: 100%;
+    box-sizing: border-box;
     height: auto;
     margin-top: 0;
-    grid-area: conteudo;
-    align-items: center;
+    padding: 1em;
   }
 }
